@@ -4,7 +4,14 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def scrape_site(website_url, headers=None):
+def run_website_scrape(website_url, email, headers=None):
+    
+    
+    get_website_html(website_url, email, headers)
+
+
+
+def get_website_html(website_url, headers=None):
 
     # request URL text
     url = website_url
@@ -19,6 +26,10 @@ def scrape_site(website_url, headers=None):
     response = requests.get(url, headers=request_headers)
 
     print(response.text)
+
+
+def find_urls(html):
+    pass
 
 
 
