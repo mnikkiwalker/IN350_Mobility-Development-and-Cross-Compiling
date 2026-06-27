@@ -50,3 +50,6 @@ def find_urls(html_content):
             urls.append(url)
 
     return urls
+
+
+def render_form():
